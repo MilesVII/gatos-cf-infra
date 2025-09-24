@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "scripts": {
+    "fetch-posts": "bun ./src/posts.ts",
+    "upload-media": "bun ./src/media.ts",
+    "embeddings": "bun ./src/embeddings.ts"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.7.3",
+    "input": "^1.0.1",
+    "telegram": "^2.26.22"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.22",
+    "bun-types": "^1.2.22"
+  }
+}
