@@ -22,6 +22,7 @@ async function feedPosts() {
 		const messages = groupMessages(clear(batch.messages)).slice(0, -1); // omit last group as it may be incomplete
 		if (messages.length === 0) {
 			console.log("nothing to fetch");
+			await client.disconnect();
 			return;
 		}
 		lastKnown = messages[messages.length - 1].id;

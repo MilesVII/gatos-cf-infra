@@ -33,3 +33,9 @@ export function nothrowAsync<T, E>(cb: () => Promise<T>): Promise<Result<T, E>> 
 			}))
 	});
 }
+
+export function chunk<T>(a: T[], stride: number) {
+	return Array.from({ length: Math.ceil(a.length / stride) }, (_, i) =>
+		a.slice(i * stride, i * stride + stride)
+	);
+}
